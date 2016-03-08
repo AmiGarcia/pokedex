@@ -10,7 +10,8 @@ import XCTest
 @testable import pokemon
 
 class pokemonTests: XCTestCase {
-    let vc = ViewController()
+    
+    let logController = LoginController()
     
     override func setUp() {
         super.setUp()
@@ -34,11 +35,20 @@ class pokemonTests: XCTestCase {
         }
     }
     func testLoginTrue(){
-        
-        
 
-    
+//        XCTAssertTrue(logController.login("ash", pw: "misty",rf: lr), "true")
+        
     }
-
-
+    private func lr(sucess: Bool,message: String, trainer: Trainer?){
+        if sucess{
+            
+            print("login feito com sucesso!")
+        }else{
+            print("Login falhou! Mensagem:" + (message))
+        }
+        
+    }
+    
+    
+    
 }

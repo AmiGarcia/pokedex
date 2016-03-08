@@ -26,6 +26,7 @@
 		407C3B371C861E4400F450FF /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 407C3B241C861DEA00F450FF /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		407C3B591C86271B00F450FF /* Gloss.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407C3B521C86271100F450FF /* Gloss.framework */; };
 		407C3B5A1C86271B00F450FF /* Gloss.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 407C3B521C86271100F450FF /* Gloss.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		409192531C8A0D780027812D /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409192521C8A0D780027812D /* LoginController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -175,6 +176,7 @@
 		407C3B171C860E9C00F450FF /* PokemonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PokemonCell.swift; path = ../PokemonCell.swift; sourceTree = "<group>"; };
 		407C3B191C861DEA00F450FF /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
 		407C3B4A1C86271000F450FF /* Gloss.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Gloss.xcodeproj; path = "Gloss-develop/Gloss.xcodeproj"; sourceTree = "<group>"; };
+		409192521C8A0D780027812D /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginController.swift; path = ../LoginController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +206,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		407662471C89F1CF00A211AB /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				407C3B171C860E9C00F450FF /* PokemonCell.swift */,
+				407662451C877AB500A211AB /* PokemonSkillCell.swift */,
+			);
+			name = "Custom Cells";
+			sourceTree = "<group>";
+		};
+		407662481C89F1E600A211AB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				407C3AE01C85F92700F450FF /* ViewController.swift */,
+				4076623A1C877A3900A211AB /* DetailPokemon.swift */,
+				407C3B0C1C85FB5C00F450FF /* PokedexMain.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		407C3AD21C85F92700F450FF = {
 			isa = PBXGroup;
 			children = (
@@ -229,14 +250,12 @@
 		407C3ADD1C85F92700F450FF /* pokemon */ = {
 			isa = PBXGroup;
 			children = (
-				407C3B171C860E9C00F450FF /* PokemonCell.swift */,
-				407662451C877AB500A211AB /* PokemonSkillCell.swift */,
-				407C3B141C8607B500F450FF /* Model */,
+				409192521C8A0D780027812D /* LoginController.swift */,
 				407C3ADE1C85F92700F450FF /* AppDelegate.swift */,
-				407C3AE01C85F92700F450FF /* ViewController.swift */,
+				407662471C89F1CF00A211AB /* Custom Cells */,
+				407C3B141C8607B500F450FF /* Model */,
+				407662481C89F1E600A211AB /* Controller */,
 				407C3AE21C85F92700F450FF /* Main.storyboard */,
-				4076623A1C877A3900A211AB /* DetailPokemon.swift */,
-				407C3B0C1C85FB5C00F450FF /* PokedexMain.swift */,
 				407C3AE51C85F92700F450FF /* Assets.xcassets */,
 				407C3AE71C85F92700F450FF /* LaunchScreen.storyboard */,
 				407C3AEA1C85F92700F450FF /* Info.plist */,
@@ -522,6 +541,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				409192531C8A0D780027812D /* LoginController.swift in Sources */,
 				407C3B161C86087F00F450FF /* Skill.swift in Sources */,
 				407C3B111C86071F00F450FF /* Pokemon.swift in Sources */,
 				407C3B0D1C85FB5C00F450FF /* PokedexMain.swift in Sources */,

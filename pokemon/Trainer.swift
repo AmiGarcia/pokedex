@@ -9,8 +9,7 @@
 import Gloss
 
 class Trainer: Decodable{
-    
-    
+
     var name = ""
     var age = 0
     var photo = ""
