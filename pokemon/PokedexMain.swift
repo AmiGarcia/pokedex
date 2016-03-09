@@ -15,7 +15,19 @@ class PokedexMain: UIViewController, UITableViewDataSource, UITableViewDelegate 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let lc = LoginController()
+        lc.login(loginResponse)
+        
+    }
+    private func loginResponse(sucess: Bool,message: String, trainer: Trainer?){
+        if sucess{
+            self.performSegueWithIdentifier("loginToMain", sender: trainer)
+            print("login feito com sucesso!")
+        }else{
+            print("Login falhou! Mensagem:" + (message))
+        }
+        
     }
     func setupView(){
 

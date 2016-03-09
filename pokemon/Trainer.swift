@@ -6,11 +6,10 @@
 //  Copyright © 2016 Ami Garcia. All rights reserved.
 //
 
-import Gloss
+import SwiftyJSON
 
-class Trainer: Decodable{
-    
-    
+class Trainer{
+
     var name = ""
     var age = 0
     var photo = ""
@@ -18,11 +17,11 @@ class Trainer: Decodable{
     var onHandPokemons=[Pokemon]()
     
     required init?(json:JSON){
-        self.name = ("name" <~~ json)!
-        self.age = ("age" <~~ json)!
-        self.photo = ("photo" <~~ json)!
-        self.town = ("town" <~~ json)!
-        self.onHandPokemons = ("onHandPokemons" <~~ json)!
+        self.name = json["name"].stringValue
+        self.age = json["age"].intValue
+        self.photo = json["photo"].stringValue
+        self.town = json["town"].stringValue
+//        self.onHandPokemons = 
     }
     
 }

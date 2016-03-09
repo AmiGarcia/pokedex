@@ -6,9 +6,9 @@
 //  Copyright © 2016 Ami Garcia. All rights reserved.
 //
 
-import Gloss
+import SwiftyJSON
 
-class Skill: Decodable{
+class Skill{
     var name: String = ""
     var type: String = ""
     var damageCategory: String = ""
@@ -17,12 +17,12 @@ class Skill: Decodable{
     var powerPoint: Int = 0
     
     required init?(json:JSON){
-        self.name = ("name" <~~ json)!
-        self.type = ("type" <~~ json)!
-        self.damageCategory = ("damageCategory" <~~ json)!
-        self.power = ("power" <~~ json)!
-        self.accuracy = ("accuracy" <~~ json)!
-        self.powerPoint = ("powerPoint" <~~ json)!
+        self.name = json["name"].stringValue
+        self.type = json["type"].stringValue
+        self.damageCategory = json["damageCategory"].stringValue
+        self.power = json["power"].intValue
+        self.accuracy = json["accuracy"].intValue
+        self.powerPoint = json["powerPoint"].intValue
         
     }
     

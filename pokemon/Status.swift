@@ -6,9 +6,9 @@
 //  Copyright © 2016 Ami Garcia. All rights reserved.
 //
 
-import Gloss
+import SwiftyJSON
 
-class Status: Decodable{
+class Status{
     var health: Int = 0
     var attack: Int = 0
     var defense: Int = 0
@@ -19,11 +19,11 @@ class Status: Decodable{
     
     
     required init?(json:JSON){
-        self.health = ("health" <~~ json)!
-        self.attack = ("attack" <~~ json)!
-        self.defense = ("defense" <~~ json)!
-        self.spAttack = ("spAttack" <~~ json)!
-        self.speed = ("speed" <~~ json)!
+        self.health = json["health"].intValue
+        self.attack = json["attack"].intValue
+        self.defense = json["defense"].intValue
+        self.spAttack = json["spAttack"].intValue
+        self.speed = json["speed"].intValue
         
     }
 }

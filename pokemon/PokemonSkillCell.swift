@@ -41,10 +41,8 @@ class PokemonSkillCell: UITableViewCell{
         
         progressPowerPoints.setProgress(pp, animated: true)
         progressPower.setProgress(power, animated: true)
-//        progressAccuracy.setProgress(accuracy, animated: true)
-        progressAccuracy.progress = accuracy
+        progressAccuracy.setProgress(accuracy, animated: true)
         
-        print(progressAccuracy.progress)
         
     }
     

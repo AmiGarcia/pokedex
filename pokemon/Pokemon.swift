@@ -6,9 +6,9 @@
 //  Copyright © 2016 Ami Garcia. All rights reserved.
 //
 
-import Gloss
+import SwiftyJSON
 
-class Pokemon: Decodable{
+class Pokemon{
 
     var number: Int = 0
     var name: String = ""
@@ -21,15 +21,15 @@ class Pokemon: Decodable{
     var skills:[Skill] = []
     
     required init?(json:JSON){
-        self.number = ("number" <~~ json)!
-        self.name = ("name" <~~ json)!
-        self.icon = ("icon" <~~ json)!
-        self.image = ("image" <~~ json)!
-        self.level = ("level" <~~ json)!
-        self.type1 = ("type1" <~~ json)!
-        self.type2 = "type2" <~~ json
-        self.status = ("status" <~~ json)!
-        self.skills = ("skills" <~~ json)!
+        self.number = json["number"].intValue
+        self.name = json["name"].stringValue
+        self.icon = json["icon"].stringValue
+        self.image = json["image"].stringValue
+        self.level = json["level"].intValue
+        self.type1 = json["type1"].stringValue
+        self.type2 = json["type2"].stringValue
+        self.status = Status(json: "Status")!
+//        self.skills = Skill(json: "skills")
         
     }
 
